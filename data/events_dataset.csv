@@ -1,0 +1,21 @@
+Date,Event_Type,Event_Description,Expected_Impact
+1990-08-02,Iraq Invasion,Iraq invades Kuwait,Supply disruption - prices expected to rise
+1991-01-17,Gulf War,Operation Desert Storm begins,Military conflict - uncertainty and supply concerns
+1997-11-30,OPEC Decision,OPEC increases production quotas,Supply increase - prices expected to fall
+2001-09-11,Terrorist Attack,9/11 attacks on World Trade Center,Geopolitical uncertainty - prices expected to rise
+2003-03-20,Iraq War,US-led invasion of Iraq begins,Military conflict and supply disruption
+2008-09-15,Financial Crisis,Lehman Brothers bankruptcy,Global economic downturn - demand destruction
+2008-12-16,OPEC Decision,OPEC announces 2.2 million bpd production cut,Supply reduction - prices expected to rise
+2011-02-17,Libya Conflict,Arab Spring protests begin in Libya,Supply disruption from major oil producer
+2014-06-20,OPEC Decision,OPEC maintains production despite oversupply,Supply glut - prices expected to fall
+2014-11-27,OPEC Meeting,OPEC decides not to cut production,Continued oversupply - prices continue falling
+2016-11-30,OPEC Agreement,OPEC+ agrees to cut production by 1.2 million bpd,Supply reduction - prices expected to rise
+2018-05-08,US Sanctions,US withdraws from Iran nuclear deal and reimposes sanctions,Supply disruption - prices expected to rise
+2019-09-14,Saudi Attack,Drone attacks on Saudi Aramco facilities,Supply disruption from major producer
+2020-01-03,US-Iran Tension,US kills Iranian general Qasem Soleimani,Geopolitical tension - prices expected to rise
+2020-03-11,COVID-19 Pandemic,WHO declares COVID-19 a global pandemic,Demand destruction - prices expected to fall
+2020-04-12,OPEC+ Agreement,OPEC+ agrees to cut production by 9.7 million bpd,Supply reduction to counter demand drop
+2021-11-04,OPEC+ Decision,OPEC+ maintains gradual production increase,Controlled supply growth
+2022-02-24,Russia-Ukraine War,Russia invades Ukraine,Geopolitical crisis and supply concerns
+2022-03-08,US Ban,US bans Russian oil imports,Supply disruption - prices expected to rise
+2022-06-02,OPEC+ Decision,OPEC+ agrees to increase production by 648,000 bpd,Modest supply increase 
