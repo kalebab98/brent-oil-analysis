@@ -25,11 +25,27 @@ brent-oil-analysis/
 │   └── key_events.csv                 # Structured event dataset (Task 1)
 │
 ├── notebooks/
-│   └── 01_eda_and_data_prep.ipynb     # Jupyter notebook for EDA and initial data checks
+│   └── 01_eda_and_data_prep.ipynb
+│    └──2a_bayesian_changepoint_model.ipynb
+│    └──2b_insights_and_event_correlation.ipynb.ipynb
+│    └──2c - Change Point Segment Analysis and Summary Statistics.ipynb
 │
 ├── src/
 │   └── analysis_script.py
-│
+├── frontend/
+│   ├── package.json
+│   ├── public/
+│   │   └── index.html
+│   └── src/
+│       ├── App.js
+│       ├── Dashboard.js
+│       ├── index.js
+│       └── styles/
+│           └── Dashboard.css
+├── backend/
+│   ├── app.py         ← YES, put it here
+│   └── data/
+│       └── BrentOilPrices.csv
 ├── README.md                          # Overview of the repo and project structure
 ├── requirements.txt                   # Python dependencies (e.g., pandas, matplotlib, pymc3)
 └── .gitignore                         # Ignore Jupyter checkpoints, data cache, 
