@@ -22,13 +22,13 @@ This analysis provides insights for investors, analysts, and policymakers to bet
 brent-oil-analysis/
 │
 ├── data/
-│   └── key_events.csv                 # Structured event dataset (Task 1)
+│   └── key_events.csv                 
 │
 ├── notebooks/
 │   └── 01_eda_and_data_prep.ipynb
-│    └──2a_bayesian_changepoint_model.ipynb
-│    └──2b_insights_and_event_correlation.ipynb.ipynb
-│    └──2c - Change Point Segment Analysis and Summary Statistics.ipynb
+│   └──2a_bayesian_changepoint_model.ipynb
+│   └──2b_insights_and_event_correlation.ipynb.ipynb
+│   └──2c - Change Point Segment Analysis and Summary Statistics.ipynb
 │
 ├── src/
 │   └── analysis_script.py
@@ -43,7 +43,7 @@ brent-oil-analysis/
 │       └── styles/
 │           └── Dashboard.css
 ├── backend/
-│   ├── app.py         ← YES, put it here
+│   ├── app.py        
 │   └── data/
 │       └── BrentOilPrices.csv
 ├── README.md                          # Overview of the repo and project structure
