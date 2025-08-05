@@ -107,31 +107,94 @@ The analysis includes 20 major events such as:
 
 Detect structural change points in the log returns of Brent oil prices using Bayesian statistical modeling with PyMC3.
 
-## Description
 
-This task involves modeling the daily log returns of Brent crude oil prices to identify a significant change point where the statistical properties (mean and variance) of the returns change. The change point corresponds to an important structural shift in the market dynamics.
+---
 
-## Files
+## 🧠 Objectives
 
-- `log_returns.npy` — Numpy array containing daily log returns.
-- `change_point_model.py` — Python script implementing the Bayesian model using PyMC3.
-- `summary_stats.py` — Utility functions to calculate descriptive statistics.
-- `events_dataset.csv` — Dataset of key geopolitical and economic events for contextual reference.
+- Compute log returns from Brent oil prices.
+- Detect structural break using visual inspection or statistical methods.
+- Compare statistical properties (mean, std, skewness, kurtosis) before and after the change point.
+- Visualize findings.
 
-## Methodology
+---
 
-- Model log returns as normally distributed before and after a latent change point.
-- Estimate separate means and standard deviations for pre- and post-change regimes.
-- Use Markov Chain Monte Carlo (MCMC) sampling via PyMC3 to infer posterior distributions.
-- Identify the most probable change point index (τ).
+## 🧪 Methodology
 
-## Dependencies
+### 1. Log Return Calculation  
+Using the natural logarithm of daily prices:
 
-Install required Python packages:
 
-```bash
-pip install numpy pandas pymc3 scipy matplotlib
-```
+---
+
+### 2. Change Point Detection  
+Identify an index where a significant change in volatility or trend is observed.
+
+---
+
+### 3. Summary Statistics  
+Calculated for both pre- and post-change point periods:
+
+- Mean  
+- Standard Deviation  
+- Skewness  
+- Kurtosis  
+
+---
+
+### 4. Visualization
+
+- Line plot of log returns.  
+- Highlighted region showing structural break.
+
+---
+
+## 📊 Results Preview
+
+| Metric      | Before Change Point | After Change Point |
+|-------------|---------------------|--------------------|
+| Mean        | ~0.000007           | ~0.0023            |
+| Std. Dev.   | ~0.0238             | ~0.0416            |
+| Skewness    | ~-0.62              | ~-4.19             |
+| Kurtosis    | ~18.60              | ~103.23            |
+
+> These results suggest a structural break leading to increased volatility in Brent oil prices.
+
+---
+
+## 🚀 How to Run
+
+1. **Install dependencies**
+
+
+2. **Run the analysis**
+
+
+3. **View results**
+
+- Plots saved in `results/`
+- Summary stats printed to console or saved as JSON
+
+---
+
+## 🧩 Dependencies
+
+- pandas  
+- numpy  
+- matplotlib  
+- scipy  
+
+*(Optional: Add `seaborn`, `ruptures`, or `changepy` for advanced change point detection.)*
+
+---
+
+## 📌 Notes
+
+- This task sets the foundation for Task 3 (Dashboard) by preparing the statistical insights that will be visualized.
+- Data source: *Add your data source here if public or link available.*
+- Next step: Serve these results via Flask backend for the interactive dashboard.
+
+---
 
 ### Task-3 (Interactive Dashboard)
 
