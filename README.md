@@ -1,7 +1,5 @@
 # Brent Oil Price Analysis - Change Point Detection
 
-### Task-3 (Interactive Dashboard)
-
 
 # Task 3 – Interactive Dashboard for Brent Oil Prices and Change Point Visualization
 
