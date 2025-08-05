@@ -85,32 +85,81 @@ The analysis includes 20 major events such as:
 - COVID-19 pandemic (2020)
 - Russia-Ukraine war (2022)
 
-### Technical Approach
+# Task 2 – Bayesian Change Point Analysis on Brent Oil Prices
 
-- **Bayesian Inference**: Using PyMC3 for probabilistic modeling
-- **Monte Carlo Markov Chain**: For posterior sampling
-- **Change Point Detection**: Identifying structural breaks in time series
-- **Statistical Validation**: Model convergence and diagnostic checks
+## Objective
 
-### Interim Submission Status
+Detect structural change points in the log returns of Brent oil prices using Bayesian statistical modeling with PyMC3.
 
-✅ **Completed**:
-- Data analysis workflow definition
-- Event research and compilation (20 events)
-- Initial data exploration and visualization
-- Statistical approach planning
-- Assumptions and limitations documented
+## Description
 
-🔄 **In Progress**:
-- Bayesian change point model implementation
-- Interactive dashboard development
-- Final analysis and reporting
+This task involves modeling the daily log returns of Brent crude oil prices to identify a significant change point where the statistical properties (mean and variance) of the returns change. The change point corresponds to an important structural shift in the market dynamics.
 
-### Next Steps
+## Files
 
-1. Implement Bayesian change point detection with PyMC3
-2. Identify and quantify structural breaks in oil prices
-3. Correlate change points with historical events
-4. Develop interactive Flask/React dashboard
-5. Prepare final report and presentation
+- `log_returns.npy` — Numpy array containing daily log returns.
+- `change_point_model.py` — Python script implementing the Bayesian model using PyMC3.
+- `summary_stats.py` — Utility functions to calculate descriptive statistics.
+- `events_dataset.csv` — Dataset of key geopolitical and economic events for contextual reference.
 
+## Methodology
+
+- Model log returns as normally distributed before and after a latent change point.
+- Estimate separate means and standard deviations for pre- and post-change regimes.
+- Use Markov Chain Monte Carlo (MCMC) sampling via PyMC3 to infer posterior distributions.
+- Identify the most probable change point index (τ).
+
+## Dependencies
+
+Install required Python packages:
+
+```bash
+pip install numpy pandas pymc3 scipy matplotlib
+```
+
+### README for **Task-3** (Interactive Dashboard)
+
+
+# Task 3 – Interactive Dashboard for Brent Oil Prices and Change Point Visualization
+
+## Objective
+
+Develop a full-stack web application to visualize Brent oil prices, log returns, and detected change points with interactive filtering and summary statistics.
+
+## Description
+
+The dashboard allows users to:
+
+- Visualize daily Brent crude oil prices and their log returns over time.
+- See the Bayesian-inferred change point marked on the chart.
+- Filter data by selectable date ranges.
+- View descriptive statistics (mean, std dev, skewness, kurtosis) before and after the change point.
+
+## Tech Stack
+
+- **Frontend:** React, Recharts, React-Datepicker
+- **Backend:** Flask with Flask-CORS for API
+- **Communication:** RESTful API serving JSON data
+
+## Backend Files
+
+- `app.py` — Flask API serving endpoints:
+  - `/api/data` — Returns log returns and prices.
+  - `/api/change_point` — Returns detected change point index.
+  - `/api/summary_stats` — Returns descriptive statistics before/after change point.
+- `log_returns.npy` — Shared data file.
+
+## Frontend Files
+
+- `Dashboard.jsx` — Main React component with chart and controls.
+- `App.js` — React entry point.
+- `package.json` — Project dependencies.
+
+## Installation & Setup
+
+### Backend
+
+```bash
+cd backend
+pip install -r requirements.txt
+python app.py
