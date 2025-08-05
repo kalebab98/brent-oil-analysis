@@ -117,7 +117,7 @@ Install required Python packages:
 pip install numpy pandas pymc3 scipy matplotlib
 ```
 
-### README for **Task-3** (Interactive Dashboard)
+### Task-3 (Interactive Dashboard)
 
 
 # Task 3 – Interactive Dashboard for Brent Oil Prices and Change Point Visualization
@@ -154,6 +154,8 @@ The dashboard allows users to:
 - `Dashboard.jsx` — Main React component with chart and controls.
 - `App.js` — React entry point.
 - `package.json` — Project dependencies.
+![photo_2025-08-05_19-40-13](https://github.com/user-attachments/assets/fd430f0b-c62a-4bd6-8588-ab3fce49d03a)
+
 
 ## Installation & Setup
 
