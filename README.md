@@ -1,116 +1,95 @@
-# Brent Oil Price Analysis - Change Point Detection
+# Task 2 – Bayesian Change Point Analysis on Brent Oil Prices
 
-**Birhan Energies Data Science Team**
+## Objective
 
-### Project Overview
+Detect structural change points in the log returns of Brent oil prices using Bayesian statistical modeling with PyMC3.
 
-This project analyzes how major geopolitical and economic events affect Brent oil prices using Bayesian change point detection. The analysis covers 35+ years of daily oil price data (1987-2022) to identify structural breaks and correlate them with historical events.
 
-### Business Objective
+---
 
-The main goal is to study how important events affect Brent oil prices, focusing on:
-- Political decisions and conflicts in oil-producing regions
-- Global economic sanctions
-- OPEC policy changes
-- Other major geopolitical events
+## 🧠 Objectives
 
-This analysis provides insights for investors, analysts, and policymakers to better understand and react to oil price changes.
+- Compute log returns from Brent oil prices.
+- Detect structural break using visual inspection or statistical methods.
+- Compare statistical properties (mean, std, skewness, kurtosis) before and after the change point.
+- Visualize findings.
 
-### Project Structure
+---
 
-```
-brent-oil-analysis/
-│
-├── data/
-│   └── key_events.csv                 # Structured event dataset (Task 1)
-│
-├── notebooks/
-│   └── 01_eda_and_data_prep.ipynb     # Jupyter notebook for EDA and initial data checks
-│
-├── src/
-│   └── analysis_script.py
-│
-├── README.md                          # Overview of the repo and project structure
-├── requirements.txt                   # Python dependencies (e.g., pandas, matplotlib, pymc3)
-└── .gitignore                         # Ignore Jupyter checkpoints, data cache, 
-```
+## 🧪 Methodology
 
-### Key Features
+### 1. Log Return Calculation  
+Using the natural logarithm of daily prices:
 
-- **Data Exploration**: Comprehensive analysis of 35+ years of Brent oil price data
-- **Event Research**: Structured dataset of 20 key geopolitical and economic events
-- **Bayesian Change Point Detection**: Using PyMC3 for statistical modeling
-- **Interactive Dashboard**: Flask/React dashboard for stakeholder exploration
 
-### Installation and Setup
+---
 
-1. **Clone the repository**:
-   ```bash
-   git clone <repository-url>
-   cd W10
-   ```
+### 2. Change Point Detection  
+Identify an index where a significant change in volatility or trend is observed.
 
-2. **Install dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
+---
 
-3. **Run initial analysis**:
-   ```bash
-   python analysis_script.py
-   ```
+### 3. Summary Statistics  
+Calculated for both pre- and post-change point periods:
 
-### Data Sources
+- Mean  
+- Standard Deviation  
+- Skewness  
+- Kurtosis  
 
-- **Brent Oil Prices**: Daily prices from May 20, 1987 to September 30, 2022
-- **Events Dataset**: Research-based compilation of major events affecting oil markets
+---
 
-### Analysis Workflow
+### 4. Visualization
 
-1. **Data Preprocessing**: Load and clean Brent oil price data
-2. **Exploratory Analysis**: Analyze time series properties and create visualizations
-3. **Event Research**: Compile structured dataset of key events
-4. **Change Point Detection**: Implement Bayesian model using PyMC3
-5. **Correlation Analysis**: Associate detected changes with historical events
-6. **Dashboard Development**: Create interactive visualization platform
+- Line plot of log returns.  
+- Highlighted region showing structural break.
 
-### Key Events Analyzed
+---
 
-The analysis includes 20 major events such as:
-- Iraq-Kuwait conflict (1990-1991)
-- 9/11 terrorist attacks (2001)
-- Global financial crisis (2008)
-- Arab Spring and Libya conflict (2011)
-- OPEC production decisions (various dates)
-- COVID-19 pandemic (2020)
-- Russia-Ukraine war (2022)
+## 📊 Results Preview
 
-### Technical Approach
+| Metric      | Before Change Point | After Change Point |
+|-------------|---------------------|--------------------|
+| Mean        | ~0.000007           | ~0.0023            |
+| Std. Dev.   | ~0.0238             | ~0.0416            |
+| Skewness    | ~-0.62              | ~-4.19             |
+| Kurtosis    | ~18.60              | ~103.23            |
 
-- **Bayesian Inference**: Using PyMC3 for probabilistic modeling
-- **Monte Carlo Markov Chain**: For posterior sampling
-- **Change Point Detection**: Identifying structural breaks in time series
-- **Statistical Validation**: Model convergence and diagnostic checks
+> These results suggest a structural break leading to increased volatility in Brent oil prices.
 
-### Interim Submission Status
+---
 
-✅ **Completed**:
-- Data analysis workflow definition
-- Event research and compilation (20 events)
-- Initial data exploration and visualization
-- Statistical approach planning
-- Assumptions and limitations documented
+## 🚀 How to Run
 
-🔄 **In Progress**:
-- Bayesian change point model implementation
-- Interactive dashboard development
-- Final analysis and reporting
+1. **Install dependencies**
 
-### Next Steps
 
-1. Implement Bayesian change point detection with PyMC3
-2. Identify and quantify structural breaks in oil prices
-3. Correlate change points with historical events
-4. Develop interactive Flask/React dashboard
-5. Prepare final report and presentation
+2. **Run the analysis**
+
+
+3. **View results**
+
+- Plots saved in `results/`
+- Summary stats printed to console or saved as JSON
+
+---
+
+## 🧩 Dependencies
+
+- pandas  
+- numpy  
+- matplotlib  
+- scipy  
+
+*(Optional: Add `seaborn`, `ruptures`, or `changepy` for advanced change point detection.)*
+
+---
+
+## 📌 Notes
+
+- This task sets the foundation for Task 3 (Dashboard) by preparing the statistical insights that will be visualized.
+- Data source: *Add your data source here if public or link available.*
+- Next step: Serve these results via Flask backend for the interactive dashboard.
+
+---
 
